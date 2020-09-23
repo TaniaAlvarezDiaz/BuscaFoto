@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Load CCS files -->
+    <link rel="stylesheet" media="screen" type="text/css" href="./index.css">
+    
+    <!-- Load Javascript files-->
+    <script src="./index.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=API_KEY&libraries=geometry"></script>
+
+    <title>BuscaFoto</title>
+    <link rel="icon" href="./images/sculpture.png" type="image/png">
+</head>
+
+<body>
+    <main id="content">
+        <section id="top">
+            <h2 hidden>Información general</h2>
+           <p id="step"></p>
+           <div id="puntuaction">
+               <p id="totalPuntuaction"></p>
+               <p id="stepPuntuaction"></p>
+           </div>
+        </section> 
+
+        <section id="middle">
+            <h2 hidden>Frames</h2>
+            <div id="frames">
+                <div id="mapFrame"></div>
+                <img id="imageFrame"></img>
+            </div>
+            <p id="distance"></p>
+        </section>
+
+        <section id="bottom">
+            <h2 hidden>Botones</h2>
+            <button id="newGameBtn" type="button" onclick="newGame();">Nueva partida</button>
+            <button id="nextStepBtn" type="button" onclick="nextStep()">Siguiente ronda</button>
+            <button id="confirmBtn" type="button" onclick="confirm();">Confirmar</button>
+        </section>
+
+        <div id="modal">
+            <div id="modalContent">
+                <span id="modalCloseBtn">&times;</span>
+                <p id="modalInfo"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

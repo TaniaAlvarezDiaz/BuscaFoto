@@ -1,0 +1,145 @@
+html {
+    max-width: 100%;
+    margin:0 auto;
+}
+
+#content {
+    font-family: 'Source Sans Pro', serif;
+    display: grid;
+    grid-template-areas: 
+        "top"
+        "middle"
+        "bottom";
+}
+
+p, button {
+    font-size: larger;
+}
+
+/* INFORMACIÓN GENERAL */
+#top {
+    background-color:rgb(247, 184, 108);
+    grid-area: top;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+#step {
+    grid-column: 1/span 2;
+    margin-left: 200px;
+    font-size: xx-large;
+}
+
+#puntuaction {
+    grid-column: 3;
+}
+
+/* MAPA E IMAGEN */
+#middle {
+    grid-area: middle;
+    height: 550px;
+}
+
+#frames {
+    display: flex;
+    height: 500px;
+}
+
+#mapFrame {
+    width: 70%;
+}
+
+#imageFrame {
+    width: 30%;
+}
+
+/* BOTONES */
+#bottom {
+    grid-area: bottom;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+button:enabled {
+    background: rgb(247, 184, 108);
+}
+
+button:hover {
+    background:  rgb(245, 225, 202);
+}
+
+#newGame {
+    grid-column: 1;
+}
+
+#nextStep {
+    grid-column: 2;
+}
+
+#confirm {
+    grid-column: 3;
+}
+
+@media (max-width: 550px) {
+    #step {
+        grid-column: 1;
+        margin-left: 50px;
+        font-size: large;
+    }
+
+    #puntuaction {
+        grid-column: 2/span 2;
+    }
+
+    #puntuaction > p {
+        font-size: large;
+    }
+}
+
+/* MODAL */
+#modal {
+    display: none;
+    position: fixed; 
+    padding-top: 50px;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+ #modalContent {
+    position: relative; 
+    background-color: white;
+    padding: 20px; 
+    margin: auto; 
+    width: 75%;  
+    font-size: small;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  #modalCloseBtn {
+    float: right; 
+    color: lightgray; 
+    font-size: 24px;  
+    font-weight: bold;
+  }
+  #modalCloseBtn:hover {
+    color: darkgray;
+  }
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
